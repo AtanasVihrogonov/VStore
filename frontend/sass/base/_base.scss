@@ -1,0 +1,15 @@
+/* ===================================
+* Basic definition about entire project 
+* ======================================*/
+* {
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%; /* 16px * 62.5 = 10px = 1rem */
+}
+body {
+  background-color: cadetblue;
+  height: 100vh;
+  font: 1.6rem Helvetica, Arial;
+  margin: 0;
+}
