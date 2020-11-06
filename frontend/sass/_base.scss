@@ -1,0 +1,23 @@
+// COLOR VARIABLES
+$color-yellow-orange: #ffad45; // --review-color:
+$color-mine-shaft: #3e3e3e; // --bg-footer-color:
+$color-gainsboro: #dfdfdf; //--bg-border-color:
+$color-porshe: #d7995c;
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  height: 100vh;
+  font: 1.6rem Verdana, Helvetica, Arial;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+}

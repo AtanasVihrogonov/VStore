@@ -1,0 +1,45 @@
+.grid-container {
+  display: grid;
+  grid-template-areas: 'header' 'main' 'footer';
+  grid-template-columns: 1fr;
+  grid-template-rows: 5rem 1fr 5rem;
+  height: 100%;
+}
+
+header {
+  grid-area: header;
+  border-bottom: 0.2rem solid $color-mine-shaft;
+  background-color: #d7995c;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem;
+}
+
+header a {
+  margin: 1rem;
+  text-decoration: none;
+  padding-right: 0.5rem;
+  color: $color-mine-shaft;
+}
+
+header a:hover {
+  color: $color-gainsboro;
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: $color-mine-shaft;
+  color: $color-gainsboro;
+  text-decoration: none;
+  font-family: 'Audiowide', cursive;
+}
+
+footer a {
+  font-size: 1.8rem;
+  padding-left: 3px;
+  color: darken($color-gainsboro, 20%);
+  text-decoration: none;
+}
