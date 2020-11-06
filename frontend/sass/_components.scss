@@ -14,3 +14,46 @@
   border-bottom: none;
 }
 //==========  SEARCH  ==========//
+//==========  PRODUCTS ==========//
+.products {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+
+  li {
+    flex: 0 1 30rem;
+    margin: 1rem;
+    margin-bottom: 0;
+    height: 42rem;
+  }
+}
+
+.product {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+
+  img {
+    max-width: 22rem;
+    max-height: 26rem;
+    margin-top: 1.5rem;
+  }
+}
+
+.product-name {
+  line-height: 2.2rem;
+  a {
+    color: $color-mine-shaft;
+  }
+}
+
+.product-name a:hover {
+  color: #c05f00;
+}
+
+.product-brand {
+  font-size: 1.2rem;
+}

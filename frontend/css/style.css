@@ -65,3 +65,36 @@ footer a {
 
 .brand .logo-brand {
   border-bottom: none; }
+
+.products {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  list-style-type: none;
+  padding: 0;
+  margin: 0; }
+  .products li {
+    flex: 0 1 30rem;
+    margin: 1rem;
+    margin-bottom: 0;
+    height: 42rem; }
+
+.product {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around; }
+  .product img {
+    max-width: 22rem;
+    max-height: 26rem;
+    margin-top: 1.5rem; }
+
+.product-name {
+  line-height: 2.2rem; }
+  .product-name a {
+    color: #3e3e3e; }
+
+.product-name a:hover {
+  color: #c05f00; }
+
+.product-brand {
+  font-size: 1.2rem; }
