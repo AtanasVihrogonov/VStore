@@ -36,7 +36,7 @@
   justify-content: space-around;
   padding-top: 4rem;
   > div {
-    padding-top: .5rem;
+    padding-top: 0.5rem;
   }
   img {
     max-width: 22rem;
@@ -56,9 +56,30 @@
 }
 
 .product-name a:hover {
-  color: #c05f00;
+  color:  darken($color-porshe, 10%);
 }
 
 .product-brand {
   font-size: 1.2rem;
+}
+
+//==========  RATING  ==========//
+.rating {
+  color: $color-porshe;
+  font-size: 1.4rem;
+  span:last-child {
+    color: $color-mine-shaft;
+    font-size: 1.4rem;
+  }
+}
+
+.content {
+  padding: 1rem;
+}
+
+.back-to-result:hover {
+  color: darken($color-porshe, 10%);
+}
+.back-to-result *:hover {
+  color:  darken($color-porshe, 10%);
 }

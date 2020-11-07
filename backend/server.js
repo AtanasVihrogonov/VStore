@@ -1,8 +1,9 @@
 import express from 'express';
 import cors from 'cors';
-import data from './data.js';
+import data from './data';
 
 const app = express();
+const port = 5000;
 
 app.use(cors());
 
@@ -10,6 +11,6 @@ app.get('/api/products', (req, res) => {
   res.send(data.products);
 });
 
-app.listen(5000, () => {
-  console.log('serve at http://localhost:5000');
+app.listen(port, () => {
+  console.log(`Express server listening on port ${port}!`);
 });
