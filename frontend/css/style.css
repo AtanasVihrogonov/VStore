@@ -23,8 +23,7 @@ a {
 
 header {
   grid-area: header;
-  border-bottom: 0.2rem solid #3e3e3e;
-  background-color: #d7995c;
+  background-color: #7c4d1e;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -34,7 +33,7 @@ header a {
   margin: 1rem;
   text-decoration: none;
   padding-right: 0.5rem;
-  color: #3e3e3e; }
+  color: #252525; }
 
 header a:hover {
   color: #dfdfdf; }
@@ -59,7 +58,7 @@ footer a {
 
 .brand a {
   letter-spacing: 0.2rem;
-  font-size: 2.6rem;
+  font-size: 2.4rem;
   font-weight: bold;
   padding-left: 1rem; }
 

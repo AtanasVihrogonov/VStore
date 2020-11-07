@@ -8,8 +8,7 @@
 
 header {
   grid-area: header;
-  border-bottom: 0.2rem solid $color-mine-shaft;
-  background-color: #d7995c;
+  background-color: darken($color-porshe, 30%);
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -20,7 +19,7 @@ header a {
   margin: 1rem;
   text-decoration: none;
   padding-right: 0.5rem;
-  color: $color-mine-shaft;
+  color: darken($color-mine-shaft, 10%);
 }
 
 header a:hover {
