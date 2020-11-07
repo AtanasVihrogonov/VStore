@@ -23,7 +23,7 @@ a {
 
 header {
   grid-area: header;
-  background-color: #7c4d1e;
+  background-color: #cb945d;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -81,7 +81,10 @@ footer a {
 .product {
   display: flex;
   flex-direction: column;
-  justify-content: space-around; }
+  justify-content: space-around;
+  padding-top: 4rem; }
+  .product > div {
+    padding-top: .5rem; }
   .product img {
     max-width: 22rem;
     max-height: 26rem;
@@ -91,6 +94,8 @@ footer a {
   line-height: 2.2rem; }
   .product-name a {
     color: #3e3e3e; }
+    .product-name a img {
+      padding-top: 2rem; }
 
 .product-name a:hover {
   color: #c05f00; }

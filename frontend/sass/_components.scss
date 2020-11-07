@@ -22,7 +22,6 @@
   list-style-type: none;
   padding: 0;
   margin: 0;
-
   li {
     flex: 0 1 30rem;
     margin: 1rem;
@@ -35,7 +34,10 @@
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-
+  padding-top: 4rem;
+  > div {
+    padding-top: .5rem;
+  }
   img {
     max-width: 22rem;
     max-height: 26rem;
@@ -47,6 +49,9 @@
   line-height: 2.2rem;
   a {
     color: $color-mine-shaft;
+    img {
+      padding-top: 2rem;
+    }
   }
 }
 
