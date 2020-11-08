@@ -26,9 +26,9 @@ button {
 
 button.primary {
   background-color: $color-yellow-orange;
-  &:hover { 
+  &:hover {
     background-color: darken($color-yellow-orange, 5%);
-  } 
+  }
 }
 
 //==========  PRODUCTS ==========//
@@ -138,9 +138,68 @@ button.primary {
   }
 
   &-action {
-    background-color: lighten($color-gainsboro, 10%);
+    background-color: lighten($color-gainsboro, 8%);
     padding: 1rem;
     border-radius: 5px;
     border: 0.5px solid $color-mine-shaft;
   }
+}
+
+//==========  CART  ==========//
+.cart {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  &-list {
+    flex: 3 1 60rem;
+  }
+  &-list-container {
+    padding: 1rem;
+    list-style-type: none;
+  }
+  & li {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 1rem;
+    margin-bottom: 1rem;
+    border-bottom: 0.1rem solid lighten($color-mine-shaft, 50%);
+  }
+  & li:first-child {
+    align-items: flex-end;
+  }
+
+  & img {
+    max-width: 10rem;
+    max-height: 10rem;
+  }
+  &-name {
+    flex: 8 1;
+  }
+  &-name > div {
+    padding: 1rem;
+  }
+  &-image {
+    flex: 1 1;
+  }
+  &-price {
+    flex: 1 1;
+    text-align: right;
+  }
+  &-list h3 {
+    margin: 0;
+  }
+  &-list button,
+  &-list select { 
+    font-size: 1.3rem; 
+    padding: 0.5rem;
+  }
+}
+
+.cart-action {
+  flex: 1 1 20rem;
+  border: 0.1rem solid $color-mine-shaft;
+  background-color: lighten($color-gainsboro, 8%);
+  border-radius: 0.5rem;
+  padding: 1rem;
+  margin: 3rem 1rem;
 }

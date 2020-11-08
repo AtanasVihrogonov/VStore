@@ -167,7 +167,51 @@ button.primary {
   .details-action li {
     margin-bottom: 1rem; }
   .details-action {
-    background-color: #f9f9f9;
+    background-color: #f3f3f3;
     padding: 1rem;
     border-radius: 5px;
     border: 0.5px solid #3e3e3e; }
+
+.cart {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start; }
+  .cart-list {
+    flex: 3 1 60rem; }
+  .cart-list-container {
+    padding: 1rem;
+    list-style-type: none; }
+  .cart li {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 1rem;
+    margin-bottom: 1rem;
+    border-bottom: 0.1rem solid #bebebe; }
+  .cart li:first-child {
+    align-items: flex-end; }
+  .cart img {
+    max-width: 10rem;
+    max-height: 10rem; }
+  .cart-name {
+    flex: 8 1; }
+  .cart-name > div {
+    padding: 1rem; }
+  .cart-image {
+    flex: 1 1; }
+  .cart-price {
+    flex: 1 1;
+    text-align: right; }
+  .cart-list h3 {
+    margin: 0; }
+  .cart-list button,
+  .cart-list select {
+    font-size: 1.3rem;
+    padding: 0.5rem; }
+
+.cart-action {
+  flex: 1 1 20rem;
+  border: 0.1rem solid #3e3e3e;
+  background-color: #f3f3f3;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  margin: 3rem 1rem; }
