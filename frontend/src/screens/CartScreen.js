@@ -1,5 +1,5 @@
 import { getProduct } from '../api';
-import { parseRequestUrl } from '../utils';
+import { parseRequestUrl, rerender } from '../utils';
 import { getCartItems, setCartItems } from '../localStorage';
 
 // Implement addToCart function
@@ -9,19 +9,59 @@ const addToCart = (item, forceUpdate = false) => {
   const existItem = cartItems.find((x) => x.product === item.product);
 
   if (existItem) {
-    // Update cart items
-    cartItems = cartItems.map((x) =>
-      x.product === existItem.product ? item : x
-    );
+    if (forceUpdate) {
+      // Update cart items
+      cartItems = cartItems.map((x) =>
+        x.product === existItem.product ? item : x
+      );
+    }
   } else {
     cartItems = [...cartItems, item];
   }
 
   setCartItems(cartItems);
+
+  if (forceUpdate) {
+    rerender(CartScreen);
+  }
 };
 
+// Implement removeFromCart Functionality
+const removeFromCart = (id) => {
+  setCartItems(getCartItems().filter(x => x.product !== id));
+  if (id === parseRequestUrl().id) {
+    document.location.hash = '/cart';
+  } else {
+    rerender(CartScreen);
+  }
+};
+
+
 const CartScreen = {
-  after_render: () => {},
+  after_render: () => {
+    // Update item in subtotal
+    const qtySelects = document.getElementsByClassName('qty-select');
+    Array.from(qtySelects).forEach((qtySelect) => {
+      qtySelect.addEventListener('change', (e) => {
+        const item = getCartItems().find((x) => x.product === qtySelect.id);
+
+        addToCart({ ...item, qty: Number(e.target.value) }, true);
+      });
+    });
+
+    // Delete item from subtotal
+    const deleteButtons = document.getElementsByClassName('delete-button');
+    Array.from(deleteButtons).forEach((deleteButton) => {
+      deleteButton.addEventListener('click', () => {
+        removeFromCart(deleteButton.id);
+      });
+    });
+
+    // Redirect to signin
+    document.getElementById('checkout-button').addEventListener('click', () => {
+      document.location.hash = '/signin';
+    });
+  },
   render: async () => {
     const request = parseRequestUrl();
 
@@ -66,7 +106,12 @@ const CartScreen = {
                             <div>
                               Qty:
                               <select class="qty-select" id="${item.product}">
-                                <option value="1">1</option>
+                                ${[...Array(item.countInStock).keys()].map(x =>
+                                  item.qty === x + 1
+                                    ? `<option selected value="${x + 1}">${x + 1}</option>`
+                                    : `<option value="${x + 1}">${x + 1}</option>`
+                                  )
+                                }
                               </select>
                               <button type="button" class="delete-button" id="${item.product}">
                                 Delete
