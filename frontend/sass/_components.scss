@@ -14,14 +14,20 @@
 
 //==========  BUTTON  ==========//
 button {
+  cursor: pointer;
+}
+
+input,
+button {
   font: 1.6rem Helvetica;
   padding: 1rem;
   border: 0.5px solid lighten($color-mine-shaft, 25%);
   border-radius: 5px;
-  cursor: pointer;
-  &:hover {
-    border: 1px solid $color-mine-shaft;
-  }
+}
+
+input:hover,
+button:hover {
+  border: 1px solid $color-mine-shaft;
 }
 
 button.primary {
@@ -202,4 +208,31 @@ button.primary {
   border-radius: 0.5rem;
   padding: 1rem;
   margin: 3rem 1rem;
+}
+
+//==========  FORM  ==========//
+.form-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  .form-items {
+    display: flex;
+    flex-direction: column;
+    width: 33rem;
+    padding: 2rem;
+    border: 0.1rem solid lighten($color-mine-shaft, 50%);
+    border-radius: 0.5rem;
+    font-size: 1.55rem;
+    list-style-type: none;
+    & li {
+      display: flex;
+      flex-direction: column;
+      margin: 1rem 0;
+    }
+  }
+
+  h1 {
+    font-size: 2rem; 
+  }
 }

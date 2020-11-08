@@ -3,6 +3,7 @@ import ProductScreen from './screens/ProductScreen';
 import { parseRequestUrl } from './utils';
 import Error404Screen from './screens/Error404Screen';
 import CartScreen from './screens/CartScreen';
+import SigninScreen from './screens/SigninScreen';
 
 // Create router route
 const routes = {
@@ -10,6 +11,7 @@ const routes = {
   '/product/:id': ProductScreen,
   '/cart/:id': CartScreen,
   '/cart': CartScreen,
+  '/signin': SigninScreen,
 };
 
 // Create router function
