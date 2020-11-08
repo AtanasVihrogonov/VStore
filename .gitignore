@@ -1,5 +1,7 @@
 node_modules/
-frontend/images/
+frontend/images/*.jpg
+*/images/*
+images/*
 .env
 .DS_Store
 .vscode
