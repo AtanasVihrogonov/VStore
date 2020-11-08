@@ -1,19 +1,36 @@
 //==========  BRAND  ==========//
 .brand {
   font-family: 'Audiowide', cursive;
+  & a {
+    letter-spacing: 0.2rem;
+    font-size: 2.4rem;
+    font-weight: bold;
+    padding-left: 1rem;
+  }
+  & .logo-brand {
+    border-bottom: none;
+  }
 }
 
-.brand a {
-  letter-spacing: 0.2rem;
-  font-size: 2.4rem;
-  font-weight: bold;
-  padding-left: 1rem;
+//==========  BUTTON  ==========//
+button {
+  font: 1.6rem Helvetica;
+  padding: 1rem;
+  border: 0.5px solid lighten($color-mine-shaft, 25%);
+  border-radius: 5px;
+  cursor: pointer;
+  &:hover {
+    border: 1px solid $color-mine-shaft;
+  }
 }
 
-.brand .logo-brand {
-  border-bottom: none;
+button.primary {
+  background-color: $color-yellow-orange;
+  &:hover { 
+    background-color: darken($color-yellow-orange, 5%);
+  } 
 }
-//==========  SEARCH  ==========//
+
 //==========  PRODUCTS ==========//
 .products {
   display: flex;
@@ -56,7 +73,7 @@
 }
 
 .product-name a:hover {
-  color:  darken($color-porshe, 10%);
+  color: darken($color-porshe, 10%);
 }
 
 .product-brand {
@@ -65,7 +82,7 @@
 
 //==========  RATING  ==========//
 .rating {
-  color: $color-porshe;
+  color: darken($color-porshe, 15%);
   font-size: 1.4rem;
   span:last-child {
     color: $color-mine-shaft;
@@ -77,9 +94,53 @@
   padding: 1rem;
 }
 
+//==========  PRODUCT DETAILS  ==========//
 .back-to-result:hover {
   color: darken($color-porshe, 10%);
 }
+
 .back-to-result *:hover {
-  color:  darken($color-porshe, 10%);
+  color: darken($color-porshe, 10%);
+}
+
+.details {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  &-image {
+    flex: 2 1 60rem;
+  }
+  &-image img {
+    margin-top: 1rem;
+    max-width: 60rem;
+    width: 100%;
+  }
+
+  &-info,
+  &-action {
+    margin-top: 1rem;
+    display: flex;
+    flex: 1 1 30rem;
+  }
+  &-info ul,
+  &-action ul {
+    padding: 0;
+    list-style-type: none;
+  }
+  &-info h1 {
+    font-size: 2rem;
+    margin: 0;
+  }
+  &-info li,
+  &-action li {
+    margin-bottom: 1rem;
+  }
+
+  &-action {
+    background-color: lighten($color-gainsboro, 10%);
+    padding: 1rem;
+    border-radius: 5px;
+    border: 0.5px solid $color-mine-shaft;
+  }
 }

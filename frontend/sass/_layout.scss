@@ -8,7 +8,12 @@
 
 header {
   grid-area: header;
-  background-color: $color-porshe;
+  background: rgb(255, 173, 69);
+  background: linear-gradient(
+    15deg,
+    rgba(255, 173, 69, 1) 0%,
+    rgba(203, 148, 93, 1) 100%
+  );
   display: flex;
   justify-content: space-between;
   align-items: center;

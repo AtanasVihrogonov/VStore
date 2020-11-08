@@ -14,6 +14,15 @@ body {
 a {
   text-decoration: none; }
 
+.fw {
+  width: 100%; }
+
+.success {
+  color: #40c040; }
+
+.error {
+  color: #ff0000; }
+
 .grid-container {
   display: grid;
   grid-template-areas: 'header' 'main' 'footer';
@@ -23,7 +32,8 @@ a {
 
 header {
   grid-area: header;
-  background-color: #cb945d;
+  background: #ffad45;
+  background: linear-gradient(15deg, #ffad45 0%, #cb945d 100%);
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -55,15 +65,27 @@ footer a {
 
 .brand {
   font-family: 'Audiowide', cursive; }
+  .brand a {
+    letter-spacing: 0.2rem;
+    font-size: 2.4rem;
+    font-weight: bold;
+    padding-left: 1rem; }
+  .brand .logo-brand {
+    border-bottom: none; }
 
-.brand a {
-  letter-spacing: 0.2rem;
-  font-size: 2.4rem;
-  font-weight: bold;
-  padding-left: 1rem; }
+button {
+  font: 1.6rem Helvetica;
+  padding: 1rem;
+  border: 0.5px solid #7e7e7e;
+  border-radius: 5px;
+  cursor: pointer; }
+  button:hover {
+    border: 1px solid #3e3e3e; }
 
-.brand .logo-brand {
-  border-bottom: none; }
+button.primary {
+  background-color: #ffad45; }
+  button.primary:hover {
+    background-color: #ffa22c; }
 
 .products {
   display: flex;
@@ -104,7 +126,7 @@ footer a {
   font-size: 1.2rem; }
 
 .rating {
-  color: #cb945d;
+  color: #a66e35;
   font-size: 1.4rem; }
   .rating span:last-child {
     color: #3e3e3e;
@@ -118,3 +140,34 @@ footer a {
 
 .back-to-result *:hover {
   color: #b97b3c; }
+
+.details {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap; }
+  .details-image {
+    flex: 2 1 60rem; }
+  .details-image img {
+    margin-top: 1rem;
+    max-width: 60rem;
+    width: 100%; }
+  .details-info, .details-action {
+    margin-top: 1rem;
+    display: flex;
+    flex: 1 1 30rem; }
+  .details-info ul,
+  .details-action ul {
+    padding: 0;
+    list-style-type: none; }
+  .details-info h1 {
+    font-size: 2rem;
+    margin: 0; }
+  .details-info li,
+  .details-action li {
+    margin-bottom: 1rem; }
+  .details-action {
+    background-color: #f9f9f9;
+    padding: 1rem;
+    border-radius: 5px;
+    border: 0.5px solid #3e3e3e; }
