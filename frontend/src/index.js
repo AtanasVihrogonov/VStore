@@ -1,10 +1,12 @@
+import { hideLoading, parseRequestUrl, showLoading } from './utils';
 import HomeScreen from './screens/HomeScreen';   
 import ProductScreen from './screens/ProductScreen';
-import { hideLoading, parseRequestUrl, showLoading } from './utils';
 import Error404Screen from './screens/Error404Screen';
 import CartScreen from './screens/CartScreen';
 import SigninScreen from './screens/SigninScreen';
 import Header from './components/Header';
+import RegisterScreen from './screens/RegisterScreen';
+import ProfileScreen from './screens/ProfileScreen';
 
 // Create router route
 const routes = {
@@ -13,6 +15,8 @@ const routes = {
   '/cart/:id': CartScreen,
   '/cart': CartScreen,
   '/signin': SigninScreen,
+  '/register': RegisterScreen,
+  '/profile': ProfileScreen,
 };
 
 // Create router function

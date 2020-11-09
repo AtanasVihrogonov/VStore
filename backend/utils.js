@@ -1,6 +1,7 @@
 import jwt from 'jsonwebtoken';
 import config from './config';
 
+// Generate token
 export const generateToken = (user) => {
   return jwt.sign(
     {
@@ -12,3 +13,6 @@ export const generateToken = (user) => {
     config.JWT_SECRET
   );
 };
+
+// Create Auth Middleware 
+
