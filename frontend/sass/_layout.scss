@@ -8,12 +8,7 @@
 
 header {
   grid-area: header;
-  background: rgb(255, 173, 69);
-  background: linear-gradient(
-    15deg,
-    rgba(255, 173, 69, 1) 0%,
-    rgba(203, 148, 93, 1) 100%
-  );
+  background-color: $color-porshe;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -46,4 +41,40 @@ footer a {
   padding-left: 3px;
   color: darken($color-gainsboro, 20%);
   text-decoration: none;
+}
+
+.overlay {
+  display: none;
+  position: fixed;
+  z-index: 999;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(16, 16, 16, 0.5);
+}
+
+.overlay.active {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: $color-gainsboro;
+}
+
+.overlay > div {
+  background-color: $color-gainsboro;
+  color: $color-mine-shaft;
+  border-radius: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  max-width: 40rem;
+}
+
+.overlay > div > * {
+  margin: 2rem;
+}
+
+.fw {
+  width: 100%;
 }

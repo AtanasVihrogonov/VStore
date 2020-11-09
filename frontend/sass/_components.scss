@@ -1,17 +1,3 @@
-//==========  BRAND  ==========//
-.brand {
-  font-family: 'Audiowide', cursive;
-  & a {
-    letter-spacing: 0.2rem;
-    font-size: 2.4rem;
-    font-weight: bold;
-    padding-left: 1rem;
-  }
-  & .logo-brand {
-    border-bottom: none;
-  }
-}
-
 //==========  BUTTON  ==========//
 button {
   cursor: pointer;
@@ -88,7 +74,7 @@ button.primary {
 
 //==========  RATING  ==========//
 .rating {
-  color: darken($color-porshe, 15%);
+  color: darken($color-yellow-orange, 20%);
   font-size: 1.4rem;
   span:last-child {
     color: $color-mine-shaft;
@@ -98,17 +84,15 @@ button.primary {
 
 .content {
   padding: 1rem;
+  .back-to-result * {
+    color: darken($color-porshe, 30%);
+  }
+  .back-to-result *:hover {
+    color: darken($color-porshe, 15%);
+  }
 }
 
 //==========  PRODUCT DETAILS  ==========//
-.back-to-result:hover {
-  color: darken($color-porshe, 10%);
-}
-
-.back-to-result *:hover {
-  color: darken($color-porshe, 10%);
-}
-
 .details {
   display: flex;
   justify-content: space-between;
