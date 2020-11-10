@@ -1,7 +1,7 @@
 import express from 'express';
 import expressAsyncHandler from 'express-async-handler';
 import User from '../models/userModel';
-import { generateToken } from '../utils';
+import { generateToken, isAuth } from '../utils';
 
 const userRouter = express.Router();
 
@@ -86,6 +86,7 @@ userRouter.post(
 // @ /:id
 userRouter.put(
   '/:id',
+  isAuth,
   expressAsyncHandler(async (req, res) => {
     const user = await User.findById(req.params.id);
 
