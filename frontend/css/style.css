@@ -249,7 +249,7 @@ button.primary {
 .form-container {
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   height: 100%; }
   .form-container .form-items {
     display: flex;
@@ -266,3 +266,19 @@ button.primary {
       margin: 1rem 0; }
   .form-container h1 {
     font-size: 2rem; }
+
+.checkout-steps {
+  display: flex;
+  justify-content: space-between;
+  width: 40rem;
+  margin: 1rem auto; }
+  .checkout-steps div {
+    border-top: 0.3rem solid #dfdfdf;
+    color: #dfdfdf;
+    flex: 1 1;
+    padding-top: 1rem; }
+  .checkout-steps > div:first-child {
+    padding-left: 1rem; }
+  .checkout-steps > div.active {
+    color: #ffad45;
+    border-top-color: #ffad45; }

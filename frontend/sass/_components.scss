@@ -198,7 +198,7 @@ button.primary {
 .form-container {
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   height: 100%;
   .form-items {
     display: flex;
@@ -220,3 +220,26 @@ button.primary {
     font-size: 2rem; 
   }
 }
+
+//==========  CHECKOUT  ==========//
+.checkout-steps {
+  display: flex;
+  justify-content: space-between;
+  width: 40rem;
+  margin: 1rem auto;
+  & div {
+    border-top: 0.3rem solid $color-gainsboro;
+    color: $color-gainsboro;
+    flex: 1 1;
+    padding-top: 1rem;
+  }
+  & > div:first-child {
+    padding-left: 1rem;
+  }
+  & > div.active {
+    color: $color-yellow-orange;
+    border-top-color: $color-yellow-orange;
+  }
+}
+
+//==========  ORDER  ==========//

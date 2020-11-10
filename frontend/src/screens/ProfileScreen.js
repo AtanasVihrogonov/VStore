@@ -8,7 +8,7 @@ const ProfileScreen = {
       clearUser();
       document.location.hash = '/';
     });
-    
+
     document
       .getElementById('profile-form')
       .addEventListener('submit', async (e) => {
