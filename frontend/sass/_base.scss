@@ -20,6 +20,10 @@ body {
 
 a {
   text-decoration: none;
+  color: $color-mine-shaft;
+}
+a:hover {
+  color: darken($color-porshe, 20%);
 }
 
 .success {

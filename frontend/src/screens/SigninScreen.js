@@ -2,7 +2,9 @@ import { signin } from '../api';
 import { getUserInfo, setUserInfo } from '../localStorage';
 import { hideLoading, redirectUser, showLoading, showMessage } from '../utils';
 
+// Implement SigninScreen Object
 const SigninScreen = {
+  // Method: after_render
   after_render: () => {
     document
       .getElementById('signin-form')
@@ -26,6 +28,7 @@ const SigninScreen = {
         }
       });
   },
+  // Method: render
   render: () => {
     if (getUserInfo().name) {
       redirectUser();

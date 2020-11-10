@@ -2,8 +2,9 @@ import axios from 'axios';
 import Rating from '../components/Rating';
 import { hideLoading, showLoading } from '../utils';
 
-// Create HomeScreen Object
+// Implement HomeScreen Object
 const HomeScreen = {
+  // Method: render
   render: async () => {
     showLoading();
     // get data from backend & convert fetch to axios

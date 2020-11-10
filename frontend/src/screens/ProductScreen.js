@@ -2,15 +2,17 @@ import { hideLoading, parseRequestUrl, showLoading } from '../utils';
 import { getProduct } from '../api';
 import Rating from '../components/Rating';
 
-// Create ProductScreen Object
+// Implement ProductScreen Object
 const ProductScreen = {
+  // Method: after_render
   after_render: () => {
     const request = parseRequestUrl();
     document.getElementById('add-button').addEventListener('click', () => {
       document.location.hash = `/cart/${request.id}`;
     });
   },
-  render: async () => {
+  // Method: render
+  render: async() => {
     showLoading();
     const request = parseRequestUrl();
     const product = await getProduct(request.id);

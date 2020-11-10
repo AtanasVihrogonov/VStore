@@ -56,16 +56,9 @@ button.primary {
 
 .product-name {
   line-height: 2.2rem;
-  a {
-    color: $color-mine-shaft;
-    img {
-      padding-top: 2rem;
-    }
+  img {
+    padding-top: 2rem;
   }
-}
-
-.product-name a:hover {
-  color: darken($color-porshe, 10%);
 }
 
 .product-brand {
@@ -74,7 +67,7 @@ button.primary {
 
 //==========  RATING  ==========//
 .rating {
-  color: darken($color-yellow-orange, 20%);
+  color:  darken($color-porshe, 20%);
   font-size: 1.4rem;
   span:last-child {
     color: $color-mine-shaft;
@@ -146,22 +139,22 @@ button.primary {
   &-list-container {
     padding: 1rem;
     list-style-type: none;
-  }
-  & li {
-    display: flex;
-    justify-content: space-between;
-    padding-bottom: 1rem;
-    margin-bottom: 1rem;
-    border-bottom: 0.1rem solid lighten($color-mine-shaft, 50%);
-  }
-  & li:first-child {
-    align-items: flex-end;
+    & li {
+      display: flex;
+      justify-content: space-between;
+      padding-bottom: 1rem;
+      margin-bottom: 1rem;
+      border-bottom: 1px solid $color-gainsboro;
+    }
+    & li:first-child {
+      align-items: flex-end;
+    }
+    & img {
+      max-width: 10rem;
+      max-height: 10rem;
+    }
   }
 
-  & img {
-    max-width: 10rem;
-    max-height: 10rem;
-  }
   &-name {
     flex: 8 1;
   }
@@ -179,8 +172,8 @@ button.primary {
     margin: 0;
   }
   &-list button,
-  &-list select { 
-    font-size: 1.3rem; 
+  &-list select {
+    font-size: 1.3rem;
     padding: 0.5rem;
   }
 }
@@ -217,7 +210,7 @@ button.primary {
   }
 
   h1 {
-    font-size: 2rem; 
+    font-size: 2rem;
   }
 }
 
@@ -237,9 +230,58 @@ button.primary {
     padding-left: 1rem;
   }
   & > div.active {
-    color: $color-yellow-orange;
-    border-top-color: $color-yellow-orange;
+    color: darken($color-porshe, 20%);
+    border-top-color: darken($color-porshe, 20%);
   }
 }
 
 //==========  ORDER  ==========//
+.order {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 1rem;
+  h2 {
+    margin: 0;
+    font-size: 2rem;
+    padding-bottom: 1rem;
+  }
+  .card-list-contairer {
+    padding: 0;
+  }
+  &-info {
+    flex: 3 1 60rem;
+    & > div {
+      border: 0.1rem solid $color-gainsboro;
+      border-radius: 0.5rem;
+      padding: 1rem;
+      margin: 1rem;
+    }
+  }
+  &-action {
+    flex: 1 1 20rem;
+    border: 0.1rem solid $color-gainsboro;
+    border-radius: 0.5rem;
+    background-color: lighten($color-gainsboro, 8%);
+    padding: 1rem;
+    margin: 1rem;
+    & ul {
+      padding: 0;
+      list-style-type: none;
+    }
+    & li {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 1rem;
+    }
+    .total {
+      font-size: 1.6rem;
+      font-weight: bold;
+      color: darken($color-porshe, 20%);
+    }
+  }
+}
+
+//==========  PROFILE  ==========//
+
+//==========  DASHBOARD  ==========//

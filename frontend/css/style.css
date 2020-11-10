@@ -12,7 +12,11 @@ body {
   margin: 0; }
 
 a {
-  text-decoration: none; }
+  text-decoration: none;
+  color: #3e3e3e; }
+
+a:hover {
+  color: #93612f; }
 
 .success {
   color: #40c040; }
@@ -146,19 +150,14 @@ button.primary {
 
 .product-name {
   line-height: 2.2rem; }
-  .product-name a {
-    color: #3e3e3e; }
-    .product-name a img {
-      padding-top: 2rem; }
-
-.product-name a:hover {
-  color: #b97b3c; }
+  .product-name img {
+    padding-top: 2rem; }
 
 .product-brand {
   font-size: 1.2rem; }
 
 .rating {
-  color: #de7c00;
+  color: #93612f;
   font-size: 1.4rem; }
   .rating span:last-child {
     color: #3e3e3e;
@@ -211,17 +210,17 @@ button.primary {
   .cart-list-container {
     padding: 1rem;
     list-style-type: none; }
-  .cart li {
-    display: flex;
-    justify-content: space-between;
-    padding-bottom: 1rem;
-    margin-bottom: 1rem;
-    border-bottom: 0.1rem solid #bebebe; }
-  .cart li:first-child {
-    align-items: flex-end; }
-  .cart img {
-    max-width: 10rem;
-    max-height: 10rem; }
+    .cart-list-container li {
+      display: flex;
+      justify-content: space-between;
+      padding-bottom: 1rem;
+      margin-bottom: 1rem;
+      border-bottom: 1px solid #dfdfdf; }
+    .cart-list-container li:first-child {
+      align-items: flex-end; }
+    .cart-list-container img {
+      max-width: 10rem;
+      max-height: 10rem; }
   .cart-name {
     flex: 8 1; }
   .cart-name > div {
@@ -280,5 +279,42 @@ button.primary {
   .checkout-steps > div:first-child {
     padding-left: 1rem; }
   .checkout-steps > div.active {
-    color: #ffad45;
-    border-top-color: #ffad45; }
+    color: #93612f;
+    border-top-color: #93612f; }
+
+.order {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 1rem; }
+  .order h2 {
+    margin: 0;
+    font-size: 2rem;
+    padding-bottom: 1rem; }
+  .order .card-list-contairer {
+    padding: 0; }
+  .order-info {
+    flex: 3 1 60rem; }
+    .order-info > div {
+      border: 0.1rem solid #dfdfdf;
+      border-radius: 0.5rem;
+      padding: 1rem;
+      margin: 1rem; }
+  .order-action {
+    flex: 1 1 20rem;
+    border: 0.1rem solid #dfdfdf;
+    border-radius: 0.5rem;
+    background-color: #f3f3f3;
+    padding: 1rem;
+    margin: 1rem; }
+    .order-action ul {
+      padding: 0;
+      list-style-type: none; }
+    .order-action li {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 1rem; }
+    .order-action .total {
+      font-size: 1.6rem;
+      font-weight: bold;
+      color: #93612f; }

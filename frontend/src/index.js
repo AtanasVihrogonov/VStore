@@ -9,6 +9,7 @@ import RegisterScreen from './screens/RegisterScreen';
 import ProfileScreen from './screens/ProfileScreen';
 import ShippingScreen from './screens/ShippingScreen';
 import PaymentScreen from './screens/PaymentScreen';
+import PlaceOrderScreen from './screens/PlaseOrderScreen';
 
 
 // Create router route
@@ -22,6 +23,7 @@ const routes = {
   '/profile': ProfileScreen,
   '/shipping': ShippingScreen,
   '/payment': PaymentScreen,
+  '/placeorder': PlaceOrderScreen,
 };
 
 // Create router function

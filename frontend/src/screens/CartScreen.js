@@ -36,8 +36,9 @@ const removeFromCart = (id) => {
   }
 };
 
-
+// Implement CartScreen Object
 const CartScreen = {
+  // Method: after_render
   after_render: () => {
     // Update item in subtotal
     const qtySelects = document.getElementsByClassName('qty-select');
@@ -62,6 +63,7 @@ const CartScreen = {
       document.location.hash = '/signin';
     });
   },
+  // Method: render
   render: async () => {
     const request = parseRequestUrl();
 
@@ -101,19 +103,28 @@ const CartScreen = {
                           </div>
                           <div class="cart-name">
                             <div>
-                              <a href="/#/product/${item.product}"> ${item.name} </a>
+                              <a href="/#/product/${item.product}"> ${
+                        item.name
+                      } </a>
                             </div>
                             <div>
                               Qty:
                               <select class="qty-select" id="${item.product}">
-                                ${[...Array(item.countInStock).keys()].map(x =>
+                                ${[
+                                  ...Array(item.countInStock).keys(),
+                                ].map((x) =>
                                   item.qty === x + 1
-                                    ? `<option selected value="${x + 1}">${x + 1}</option>`
-                                    : `<option value="${x + 1}">${x + 1}</option>`
-                                  )
-                                }
+                                    ? `<option selected value="${x + 1}">${
+                                        x + 1
+                                      }</option>`
+                                    : `<option value="${x + 1}">${
+                                        x + 1
+                                      }</option>`
+                                )}
                               </select>
-                              <button type="button" class="delete-button" id="${item.product}">
+                              <button type="button" class="delete-button" id="${
+                                item.product
+                              }">
                                 Delete
                               </button>
                             </div>

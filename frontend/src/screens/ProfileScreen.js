@@ -2,7 +2,9 @@ import { update } from '../api';
 import { getUserInfo, setUserInfo, clearUser } from '../localStorage';
 import { showLoading, hideLoading, showMessage } from '../utils';
 
+// Implement ProfileScreen Object
 const ProfileScreen = {
+  // Method: after_render
   after_render: () => {
     document.getElementById('signout-button').addEventListener('click', () => {
       clearUser();
@@ -28,12 +30,13 @@ const ProfileScreen = {
         }
       });
   },
+  // Method: render
   render: () => {
     const { name, email } = getUserInfo();
     if (!name) {
       document.location.hash = '/';
     }
-    
+
     return `
       <div class="form-container">
         <form id="profile-form">
