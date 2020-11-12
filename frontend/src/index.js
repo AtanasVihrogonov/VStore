@@ -1,6 +1,6 @@
-import { hideLoading, parseRequestUrl, showLoading } from './utils';
 import HomeScreen from './screens/HomeScreen';   
 import ProductScreen from './screens/ProductScreen';
+import { hideLoading, parseRequestUrl, showLoading } from './utils';
 import Error404Screen from './screens/Error404Screen';
 import CartScreen from './screens/CartScreen';
 import SigninScreen from './screens/SigninScreen';
@@ -9,15 +9,16 @@ import RegisterScreen from './screens/RegisterScreen';
 import ProfileScreen from './screens/ProfileScreen';
 import ShippingScreen from './screens/ShippingScreen';
 import PaymentScreen from './screens/PaymentScreen';
-import PlaceOrderScreen from './screens/PlaseOrderScreen';
-
+import PlaceOrderScreen from './screens/PlaceOrderScreen';
+import OrderScreen from './screens/OrderScreen';
 
 // Create router route
 const routes = {
   '/': HomeScreen,
   '/product/:id': ProductScreen,
+  '/order/:id': OrderScreen,
   '/cart/:id': CartScreen,
-  '/cart': CartScreen,
+  '/cart': CartScreen,                                                                  
   '/signin': SigninScreen,
   '/register': RegisterScreen,
   '/profile': ProfileScreen,

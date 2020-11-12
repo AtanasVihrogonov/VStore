@@ -257,6 +257,9 @@ button.primary {
       padding: 1rem;
       margin: 1rem;
     }
+    & > div > div {
+      padding: 1rem;
+    }
   }
   &-action {
     flex: 1 1 20rem;
