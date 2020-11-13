@@ -320,3 +320,24 @@ button.primary {
       font-size: 1.6rem;
       font-weight: bold;
       color: #93612f; }
+
+.profile {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: space-between; }
+  .profile-info {
+    flex: 1 1 20rem; }
+  .profile-orders {
+    flex: 3 1 60rem;
+    margin-left: 1rem; }
+  .profile table {
+    width: 100%; }
+  .profile th {
+    text-align: left; }
+  .profile tbody > tr:nth-child(odd) {
+    background-color: #e9e9e9; }
+  .profile tbody > tr:nth-child(even) {
+    background-color: #f3f3f3; }
+  .profile td {
+    padding: .5rem; }

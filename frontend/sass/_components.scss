@@ -286,5 +286,32 @@ button.primary {
 }
 
 //==========  PROFILE  ==========//
-
+.profile {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: space-between;
+  &-info {
+    flex: 1 1 20rem;
+  }
+  &-orders {
+    flex: 3 1 60rem;
+    margin-left: 1rem;
+  }
+  table {
+    width: 100%;
+  }
+  th {
+    text-align: left;
+  }
+  tbody > tr:nth-child(odd) {
+    background-color: lighten($color-gainsboro, 4%);
+  }
+  tbody > tr:nth-child(even) {
+    background-color:lighten($color-gainsboro, 8%);
+  }
+  td {
+    padding: .5rem;
+  }
+}
 //==========  DASHBOARD  ==========//
