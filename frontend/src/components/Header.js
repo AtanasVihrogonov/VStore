@@ -1,9 +1,9 @@
-import { getUserInfo } from "../localStorage";
+import { getUserInfo } from '../localStorage';
 
 // Implement Independant Header Component
 const Header = {
   render: () => {
-    const { name } = getUserInfo();
+    const { name, isAdmin } = getUserInfo();
     return ` 
       <div class="brand">
         <a href="/#/">VStore</a>
@@ -15,6 +15,7 @@ const Header = {
             : `<a href="/#/signin">Sign-In</a>`
         }    
           <a href="/#/cart">Cart</a>
+          ${isAdmin ? `<a href="/#/dashboard">Dashboard</a>` : ''}
       </div>
     `;
   },

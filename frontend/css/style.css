@@ -69,7 +69,7 @@ footer {
 
 footer a {
   font-size: 1.8rem;
-  padding-left: 3px;
+  padding-left: .5rem;
   color: #acacac;
   text-decoration: none; }
 
@@ -157,7 +157,7 @@ button.primary {
   font-size: 1.2rem; }
 
 .rating {
-  color: #93612f;
+  color: #a66e35;
   font-size: 1.4rem; }
   .rating span:last-child {
     color: #3e3e3e;
@@ -341,3 +341,29 @@ button.primary {
     background-color: #f3f3f3; }
   .profile td {
     padding: .5rem; }
+
+.dashboard {
+  display: flex;
+  flex-wrap: wrap;
+  height: 100%; }
+  .dashboard h1 {
+    font-size: 3rem;
+    margin: 1rem 0; }
+  .dashboard-menu {
+    flex: 1 1 20rem;
+    background-color: #f3f3f3; }
+    .dashboard-menu ul {
+      padding: 0; }
+    .dashboard-menu a {
+      display: flex;
+      padding: 1rem;
+      padding-left: 2rem;
+      justify-content: space-between; }
+    .dashboard-menu a:hover {
+      background-color: #dfdfdf; }
+  .dashboard-menu li.selected a {
+    background-color: #dfdfdf;
+    color: #93612f; }
+  .dashboard-content {
+    flex: 4 1 80rem;
+    padding: 1rem; }
