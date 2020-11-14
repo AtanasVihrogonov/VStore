@@ -13,10 +13,12 @@ import PlaceOrderScreen from './screens/PlaceOrderScreen';
 import OrderScreen from './screens/OrderScreen';
 import DashboardScreen from './screens/DashboardScreen';
 import ProductListScreen from './screens/ProductListScreen';
+import ProductEditScreen from './screens/ProductEditScreen';
 
 // Create router route
 const routes = {
   '/': HomeScreen,
+  '/product/:id/edit': ProductEditScreen,
   '/product/:id': ProductScreen,
   '/order/:id': OrderScreen,
   '/cart/:id': CartScreen,
@@ -29,7 +31,6 @@ const routes = {
   '/placeorder': PlaceOrderScreen,
   '/dashboard': DashboardScreen,
   '/productlist': ProductListScreen,
-  
 };
 
 // Create router function
