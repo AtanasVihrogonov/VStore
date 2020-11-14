@@ -20,7 +20,7 @@ const routes = {
   '/product/:id': ProductScreen,
   '/order/:id': OrderScreen,
   '/cart/:id': CartScreen,
-  '/cart': CartScreen,                                                                  
+  '/cart': CartScreen,
   '/signin': SigninScreen,
   '/register': RegisterScreen,
   '/profile': ProfileScreen,
@@ -29,6 +29,7 @@ const routes = {
   '/placeorder': PlaceOrderScreen,
   '/dashboard': DashboardScreen,
   '/productlist': ProductListScreen,
+  
 };
 
 // Create router function

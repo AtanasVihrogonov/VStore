@@ -12,11 +12,10 @@ const ProductScreen = {
     });
   },
   // Method: render
-  render: async() => {
-    showLoading();
+  render: async () => {
     const request = parseRequestUrl();
+    showLoading();
     const product = await getProduct(request.id);
-
     if (product.error) {
       return `<div>${product.error}</div>`;
     }

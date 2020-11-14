@@ -6,6 +6,7 @@ import bodyParser from 'body-parser';
 import config from './config';
 import userRouter from './routers/userRouter';
 import orderRouter from './routers/orderRouter';
+import productRouter from './routers/productRouter';
 
 // Connect to Database
 mongoose
@@ -28,6 +29,7 @@ app.use(cors());
 app.use(bodyParser.json());
 
 app.use('/api/users', userRouter);
+app.use('/api/products', productRouter);
 app.use('/api/orders', orderRouter);
 
 app.get('/api/paypal/clientId', (req, res) => {
