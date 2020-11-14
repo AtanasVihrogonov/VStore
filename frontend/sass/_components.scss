@@ -67,7 +67,7 @@ button.primary {
 
 //==========  RATING  ==========//
 .rating {
-  color:  darken($color-porshe, 15%);
+  color: darken($color-porshe, 15%);
   font-size: 1.4rem;
   span:last-child {
     color: $color-mine-shaft;
@@ -304,15 +304,18 @@ button.primary {
   th {
     text-align: left;
   }
-  tbody > tr:nth-child(odd) {
-    background-color: lighten($color-gainsboro, 4%);
-  }
-  tbody > tr:nth-child(even) {
-    background-color:lighten($color-gainsboro, 8%);
-  }
-  td {
-    padding: .5rem;
-  }
+}
+
+tbody > tr:nth-child(odd) {
+  background-color: lighten($color-gainsboro, 4%);
+}
+
+tbody > tr:nth-child(even) {
+  background-color: lighten($color-gainsboro, 8%);
+}
+
+td {
+  padding: 0.5rem;
 }
 
 //==========  DASHBOARD  ==========//
@@ -340,12 +343,23 @@ button.primary {
       background-color: $color-gainsboro;
     }
   }
+
   &-menu li.selected a {
     background-color: $color-gainsboro;
     color: darken($color-porshe, 20%);
   }
+
   &-content {
-    flex: 4 1 80rem; 
+    flex: 4 1 80rem;
     padding: 1rem;
+  }
+
+  .product-list button {
+    font-size: 1.3rem;
+    padding: 0.5rem;
+  }
+
+  .tr-action {
+    width: 10rem;
   }
 }
