@@ -29,14 +29,12 @@ export const getProduct = async (id) => {
       url: `${apiUrl}/api/products/${id}`,
       method: 'GET',
       headers: {
-        'Content-type': 'application/json',
+        'Content-Type': 'application/json',
       },
     });
-
     if (response.statusText !== 'OK') {
       throw new Error(response.data.message);
     }
-
     return response.data;
   } catch (err) {
     console.log(err);
@@ -65,6 +63,27 @@ export const createProduct = async () => {
   }
 };
 
+// Delete Product
+export const deleteProduct = async (productId) => {
+  try {
+    const { token } = getUserInfo();
+    const response = await axios({
+      url: `${apiUrl}/api/products/${productId}`,
+      method: 'DELETE',
+      headers: {
+        'Content-Type': 'application/json',
+        Authorization: `Bearer ${token}`,
+      },
+    });
+    if (response.statusText !== 'OK') {
+      throw new Error(response.data.message);
+    }
+    return response.data;
+  } catch (err) {
+    return { error: err.response.data.message || err.message };
+  }
+};
+
 // Create Update Product
 export const updateProduct = async (product) => {
   try {
@@ -76,7 +95,7 @@ export const updateProduct = async (product) => {
         'Content-Type': 'application/json',
         Authorization: `Bearer ${token}`,
       },
-      data: product
+      data: product,
     });
     if (response.statusText !== 'OK') {
       throw new Error(response.data.message);
@@ -95,20 +114,20 @@ export const uploadProductImage = async (formData) => {
       url: `${apiUrl}/api/uploads`,
       method: 'POST',
       headers: {
-        'Content-Type': 'multipart/form-data',
         Authorization: `Bearer ${token}`,
+        'Content-Type': 'multipart/form-data',
       },
       data: formData,
     });
     if (response.statusText !== 'Created') {
       throw new Error(response.data.message);
+    } else {
+      return response.data;
     }
-    return response.data;
   } catch (err) {
     return { error: err.response.data.message || err.message };
   }
-}
-
+};
 
 // Signin Function
 export const signin = async ({ email, password }) => {
@@ -199,14 +218,32 @@ export const createOrder = async (order) => {
       },
       data: order,
     });
-
     if (response.statusText !== 'Created') {
       throw new Error(response.data.message);
     }
-
     return response.data;
   } catch (err) {
     return { error: err.response ? err.response.data.message : err.message };
+  }
+};
+
+// Create Get Order Function
+export const getOrder = async (id) => {
+  try {
+    const { token } = getUserInfo();
+    const response = await axios({
+      url: `${apiUrl}/api/orders/${id}`,
+      headers: {
+        'Content-Type': 'application/json',
+        Authorization: `Bearer ${token}`,
+      },
+    });
+    if (response.statusText !== 'OK') {
+      throw new Error(response.data.message);
+    }
+    return response.data;
+  } catch (err) {
+    return { error: err.message };
   }
 };
 
@@ -227,25 +264,6 @@ export const getMyOrders = async () => {
     return response.data;
   } catch (err) {
     return { error: err.response ? err.response.data.message : err.message };
-  }
-};
-// Create Get Order Function
-export const getOrder = async (id) => {
-  try {
-    const { token } = getUserInfo();
-    const response = await axios({
-      url: `${apiUrl}/api/orders/${id}`,
-      headers: {
-        'Content-Type': 'application/json',
-        Authorization: `Bearer ${token}`,
-      },
-    });
-    if (response.statusText !== 'OK') {
-      throw new Error(response.data.message);
-    }
-    return response.data;
-  } catch (err) {
-    return { error: err.message };
   }
 };
 

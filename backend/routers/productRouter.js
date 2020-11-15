@@ -1,10 +1,11 @@
 import express from 'express';
 import expressAsyncHandler from 'express-async-handler';
-import Product from '../models/productModel';
 import { isAuth, isAdmin } from '../utils';
+import Product from '../models/productModel';
 
 // Get products
 const productRouter = express.Router();
+
 productRouter.get(
   '/',
   expressAsyncHandler(async (req, res) => {
@@ -70,6 +71,21 @@ productRouter.put(
       } else {
         res.status(500).send({ message: 'Error in updating product' });
       }
+    } else {
+      res.status(404).send({ message: 'Product Not Found' });
+    }
+  })
+);
+
+productRouter.delete(
+  '/:id',
+  isAuth,
+  isAdmin,
+  expressAsyncHandler(async (req, res) => {
+    const product = await Product.findById(req.params.id);
+    if (product) {
+      const deletedProduct = await product.remove();
+      res.send({ message: 'Product Deleted', product: deletedProduct });
     } else {
       res.status(404).send({ message: 'Product Not Found' });
     }
