@@ -1,11 +1,13 @@
 {
-  "name": "frontend",
+  "name": "vstore-frontend",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
     "start": "webpack-dev-server --watch-content-base --open",
-    "compile:sass": "node-sass sass/main.scss css/style.css -w"
+    "build": "webpack --mode=production --output ./main.js",
+    "compile:sass": "node-sass sass/main.scss css/style.css -w",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
   "author": "",

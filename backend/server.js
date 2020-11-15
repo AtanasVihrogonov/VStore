@@ -2,6 +2,7 @@ import express from 'express';
 import cors from 'cors';
 import mongoose from 'mongoose';
 import bodyParser from 'body-parser';
+import path from 'path';
 import config from './config';
 import userRouter from './routers/userRouter';
 import orderRouter from './routers/orderRouter';
@@ -34,6 +35,15 @@ app.use('/api/orders', orderRouter);
 
 app.get('/api/paypal/clientId', (req, res) => {
   res.send({ clientId: config.PAYPAL_CLIENT_ID });
+});
+
+app.use('/uploads', express.static(path.join(__dirname, '/../uploads')));
+
+// Serve all file in frontend folder
+app.use(express.static(path.join(__dirname, '/../frontend')));
+// Serve html file
+app.get('*', (req, res) => {
+  res.sendFile(path.join(__dirname, '/../frontend/index.html'));
 });
 
 // Handle all error in the express instance
