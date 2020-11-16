@@ -370,6 +370,7 @@ td {
   .dashboard-content {
     flex: 4 1 80rem;
     padding: 1rem; }
+  .dashboard .order-list button,
   .dashboard .product-list button {
     font-size: 1.3rem;
     padding: 0.5rem; }
