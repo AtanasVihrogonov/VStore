@@ -35,7 +35,7 @@ a:hover {
     border-bottom: none; }
 
 .dashboard .summary-title.color1 {
-  background-color: #ffe3c7; }
+  background-color: #ffca94; }
 
 .dashboard .summary-title.color2 {
   background-color: #bdd1ea; }
@@ -405,3 +405,8 @@ td {
     font-size: 4rem;
     padding: 1rem;
     text-align: center; }
+  .dashboard .charts {
+    display: flex;
+    justify-content: space-between; }
+    .dashboard .charts > div {
+      flex: 1; }

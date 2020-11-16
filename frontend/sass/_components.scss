@@ -390,4 +390,11 @@ td {
     text-align: center;
   }
   
+  .charts {
+    display: flex;
+    justify-content: space-between;
+    & > div {
+      flex: 1;
+    }
+  }
 }

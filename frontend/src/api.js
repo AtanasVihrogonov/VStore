@@ -368,21 +368,22 @@ export const deliverOrder = async (orderId) => {
 };
 
 // Create getSummary Function
-export const getSummary = async() => {
+export const getSummary = async () => {
   try {
     const { token } = getUserInfo();
     const response = await axios({
       url: `${apiUrl}/api/orders/summary`,
       headers: {
-        'Content-Type': 'application/json',
         Authorization: `Bearer ${token}`,
+        'content-type': 'application/json',
       },
     });
     if (response.statusText !== 'OK') {
       throw new Error(response.data.message);
+    } else {
+      return response.data;
     }
-    return response.data;
   } catch (err) {
     return { error: err.response ? err.response.data.message : err.message };
   }
-}
+};
