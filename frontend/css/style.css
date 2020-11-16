@@ -34,6 +34,15 @@ a:hover {
   .brand .logo-brand {
     border-bottom: none; }
 
+.dashboard .summary-title.color1 {
+  background-color: #ffe3c7; }
+
+.dashboard .summary-title.color2 {
+  background-color: #bdd1ea; }
+
+.dashboard .summary-title.color3 {
+  background-color: #b9e9be; }
+
 .grid-container {
   display: grid;
   grid-template-areas: 'header' 'main' 'footer';
@@ -376,3 +385,23 @@ td {
     padding: 0.5rem; }
   .dashboard .tr-action {
     width: 10rem; }
+  .dashboard .summary-items {
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+    flex-wrap: wrap;
+    padding: 0;
+    margin: 0; }
+    .dashboard .summary-items li {
+      border: 0.1rem solid #dfdfdf;
+      margin: 2rem;
+      border-radius: 0.5rem;
+      flex: 1 1 20rem; }
+  .dashboard .summary-title {
+    background-color: #dfdfdf;
+    font-size: 2rem;
+    padding: 1rem; }
+  .dashboard .summary-body {
+    font-size: 4rem;
+    padding: 1rem;
+    text-align: center; }

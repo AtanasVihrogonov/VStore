@@ -8,6 +8,36 @@ import User from '../models/userModel';
 const orderRouter = express.Router();
 
 orderRouter.get(
+  '/summary',
+  isAuth,
+  isAdmin,
+  expressAsyncHandler(async (req, res) => {
+    // Calculate total orders
+    const orders = await Order.aggregate([
+      {
+        $group: {
+          _id: null,
+          numOrders: { $sum: 1 },
+          totalSales: { $sum: '$totalPrice' },
+        },
+      },
+    ]);
+
+    // Calculate total users
+    const users = await User.aggregate([
+      {
+        $group: {
+          _id: null,
+          numUsers: { $sum: 1 },
+        },
+      },
+    ]);
+
+    res.send({ users, orders });
+  })
+);
+
+orderRouter.get(
   '/',
   isAuth,
   isAdmin,
@@ -111,6 +141,5 @@ orderRouter.put(
     }
   })
 );
-
 
 export default orderRouter;
