@@ -8,6 +8,9 @@ images/*
 uploads/*.jpg
 uploads/*.png
 
+# testing
+/coverage
+
 # production
 /build
 

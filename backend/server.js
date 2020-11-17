@@ -24,7 +24,6 @@ mongoose
   });
 
 const app = express();
-const port = 5000;
 
 app.use(cors());
 app.use(bodyParser.json());
@@ -52,6 +51,6 @@ app.use((err, req, res, next) => {
   res.status(status).send({ message: err.message });
 });
 
-app.listen(port, () => {
-  console.log(`Express server listening on port ${port}!`);
+app.listen(config.PORT, () => {
+  console.log('serve at http://localhost:5000');
 });
