@@ -53,6 +53,9 @@ a:hover {
     border-bottom: none;
   }
 }
+#link {
+  color: darken($color-yellow-orange, 5%);
+}
 
 #details-info {
   color: $color-porshe;
