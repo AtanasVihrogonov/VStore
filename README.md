@@ -1,8 +1,10 @@
 # VStore
 
-I design and develop a fully-function website using Vanilla JavaScript, HTML5 and CSS3 in frontend and Node and MongoDB in backend.
+I design and develop a fully-function website using Vanilla JavaScript, HTML5 and CSS3 in frontend and Node and MongoDB in the backend.
 
 Also deploy on cloud server Heroku and connect it to payment gateways PayPal.
+
+The website was created by me only a part of my learning process. 
 
 ## Tehnologies
 > Project is created with:
