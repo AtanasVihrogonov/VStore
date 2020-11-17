@@ -41,6 +41,12 @@ a:hover {
   .brand .logo-brand {
     border-bottom: none; }
 
+#link {
+  color: #de7c00; }
+
+#link:hover {
+  color: #cb945d; }
+
 #details-info {
   color: #cb945d; }
   #details-info:hover {

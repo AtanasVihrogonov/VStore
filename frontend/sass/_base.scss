@@ -54,7 +54,10 @@ a:hover {
   }
 }
 #link {
-  color: darken($color-yellow-orange, 5%);
+  color: darken($color-yellow-orange, 20%);
+}
+#link:hover {
+  color: $color-porshe;
 }
 
 #details-info {
