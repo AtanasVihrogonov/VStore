@@ -233,6 +233,9 @@ button.primary {
     color: darken($color-porshe, 20%);
     border-top-color: darken($color-porshe, 20%);
   }
+  @media (max-width: 640px) {
+    width: 35rem;
+  }
 }
 
 //==========  ORDER  ==========//
@@ -304,6 +307,29 @@ button.primary {
   th {
     text-align: left;
   }
+  @media (max-width: 640px) {
+    .profile-orders {
+      display: flex;
+      flex-wrap: wrap;
+    }
+    tr {
+      display: flex;
+      flex-direction: column;
+    }
+    table {
+      display: flex;
+    }
+    thead {
+      width: 30%;
+      tr th{
+        padding-bottom: 1rem;
+        flex-direction: column;
+      }
+    }
+    tbody {
+      width: 70%;
+    }
+  }
 }
 
 tbody > tr:nth-child(odd) {
@@ -324,13 +350,14 @@ td {
   flex-wrap: wrap;
   height: 100%;
   & h1 {
-    font-size: 3rem;
+    font-size: 2rem;
     margin: 1rem 0;
   }
   &-menu {
     flex: 1 1 20rem;
     background-color: lighten($color-gainsboro, 8%);
     ul {
+      list-style-type: none;
       padding: 0;
     }
     a {
@@ -338,6 +365,7 @@ td {
       padding: 1rem;
       padding-left: 2rem;
       justify-content: space-between;
+      list-style-type: none;
     }
     a:hover {
       background-color: $color-gainsboro;
@@ -395,6 +423,34 @@ td {
     justify-content: space-between;
     & > div {
       flex: 1;
+    }
+    .ct-label {
+      font-size: 1rem;
+      font-weight: bold;
+    }
+  }
+  @media (max-width: 640px) {
+    .tr-action {
+      width: 0;
+    }
+    tr {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    table {
+      display: flex;
+      margin-top: 2rem;
+    }
+    thead {
+      width: 37%;
+      tr th{
+        padding: .8rem 0;
+        flex-direction: column;
+      }
+    }
+    tbody {
+      width: 63%;
     }
   }
 }

@@ -6,7 +6,9 @@ const Header = {
     const { name, isAdmin } = getUserInfo();
     return ` 
       <div class="brand">
-        <a href="/#/">VStore</a>
+        <a href="/#/">
+          <i class="fa fa-cubes" aria-hidden="true"></i>VStore
+        </a>
       </div>
       <div>
         ${

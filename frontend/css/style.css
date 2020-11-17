@@ -5,6 +5,9 @@
 
 html {
   font-size: 62.5%; }
+  @media (max-width: 640px) {
+    html {
+      font-size: 60%; } }
 
 body {
   height: 100vh;
@@ -29,10 +32,19 @@ a:hover {
   .brand a {
     letter-spacing: 0.2rem;
     font-size: 2.4rem;
-    font-weight: bold;
+    font-weight: bold; }
+    @media (max-width: 640px) {
+      .brand a i {
+        display: none; } }
+  .brand i {
     padding-left: 1rem; }
   .brand .logo-brand {
     border-bottom: none; }
+
+#details-info {
+  color: #cb945d; }
+  #details-info:hover {
+    color: #b97b3c; }
 
 .dashboard .summary-title.color1 {
   background-color: #ffca94; }
@@ -59,9 +71,8 @@ header {
   padding: 0.5rem; }
 
 header a {
-  margin: 1rem;
+  margin: .5rem;
   text-decoration: none;
-  padding-right: 0.5rem;
   color: #252525; }
 
 header a:hover {
@@ -112,6 +123,22 @@ footer a {
 
 .fw {
   width: 100%; }
+
+/* Media Query */
+@media (min-width: 1920px) {
+  #main-container {
+    width: 65%;
+    margin: 0 auto; } }
+
+@media (min-width: 920px) and (max-width: 1220px) {
+  .details-info, .details-action {
+    flex: 0 1 30rem; } }
+
+@media (max-width: 640px) {
+  .products li {
+    border-top: 0.15rem solid #dfdfdf; }
+  .products li:first-child {
+    border: none; } }
 
 button {
   cursor: pointer; }
@@ -290,6 +317,9 @@ button.primary {
   .checkout-steps > div.active {
     color: #93612f;
     border-top-color: #93612f; }
+  @media (max-width: 640px) {
+    .checkout-steps {
+      width: 35rem; } }
 
 .order {
   display: flex;
@@ -344,6 +374,22 @@ button.primary {
     width: 100%; }
   .profile th {
     text-align: left; }
+  @media (max-width: 640px) {
+    .profile .profile-orders {
+      display: flex;
+      flex-wrap: wrap; }
+    .profile tr {
+      display: flex;
+      flex-direction: column; }
+    .profile table {
+      display: flex; }
+    .profile thead {
+      width: 30%; }
+      .profile thead tr th {
+        padding-bottom: 1rem;
+        flex-direction: column; }
+    .profile tbody {
+      width: 70%; } }
 
 tbody > tr:nth-child(odd) {
   background-color: #e9e9e9; }
@@ -359,18 +405,20 @@ td {
   flex-wrap: wrap;
   height: 100%; }
   .dashboard h1 {
-    font-size: 3rem;
+    font-size: 2rem;
     margin: 1rem 0; }
   .dashboard-menu {
     flex: 1 1 20rem;
     background-color: #f3f3f3; }
     .dashboard-menu ul {
+      list-style-type: none;
       padding: 0; }
     .dashboard-menu a {
       display: flex;
       padding: 1rem;
       padding-left: 2rem;
-      justify-content: space-between; }
+      justify-content: space-between;
+      list-style-type: none; }
     .dashboard-menu a:hover {
       background-color: #dfdfdf; }
   .dashboard-menu li.selected a {
@@ -410,3 +458,23 @@ td {
     justify-content: space-between; }
     .dashboard .charts > div {
       flex: 1; }
+    .dashboard .charts .ct-label {
+      font-size: 1rem;
+      font-weight: bold; }
+  @media (max-width: 640px) {
+    .dashboard .tr-action {
+      width: 0; }
+    .dashboard tr {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start; }
+    .dashboard table {
+      display: flex;
+      margin-top: 2rem; }
+    .dashboard thead {
+      width: 37%; }
+      .dashboard thead tr th {
+        padding: .8rem 0;
+        flex-direction: column; }
+    .dashboard tbody {
+      width: 63%; } }

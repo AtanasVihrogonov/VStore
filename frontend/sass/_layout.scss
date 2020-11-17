@@ -16,9 +16,8 @@ header {
 }
 
 header a {
-  margin: 1rem;
+  margin: .5rem;
   text-decoration: none;
-  padding-right: 0.5rem;
   color: darken($color-mine-shaft, 10%);
 }
 
@@ -77,4 +76,16 @@ footer a {
 
 .fw {
   width: 100%;
+}
+
+/* Media Query */
+@media (min-width: 1920px) {
+  #main-container { width: 65%; margin: 0 auto; }
+}
+@media (min-width: 920px) and (max-width: 1220px) {
+  .details-info, .details-action { flex: 0 1 30rem; }
+}
+@media (max-width: 640px){ 
+  .products li { border-top: 0.15rem solid $color-gainsboro; }
+  .products li:first-child { border: none; }
 }

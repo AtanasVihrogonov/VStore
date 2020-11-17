@@ -11,6 +11,9 @@ $color-porshe: #cb945d;
 
 html {
   font-size: 62.5%;
+  @media (max-width: 640px) {
+    font-size: 60%;
+  }
 }
 
 body {
@@ -41,11 +44,19 @@ a:hover {
     letter-spacing: 0.2rem;
     font-size: 2.4rem;
     font-weight: bold;
+    i {@media (max-width: 640px) { display: none;}}
+  }
+  & i {
     padding-left: 1rem;
   }
   & .logo-brand {
     border-bottom: none;
   }
+}
+
+#details-info {
+  color: $color-porshe;
+  &:hover {color: darken($color-porshe, 10%); }
 }
 
 .dashboard {

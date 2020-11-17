@@ -45,19 +45,19 @@ const DashboardScreen = {
           <ul class="summary-items">
             <li>
               <div class="summary-title color1">
-                <span><i class="fa fa-users"></i> Users</span>
+                <span><i class="fa fa-user"></i> Users</span>
               </div>
               <div class="summary-body">${summary.users[0].numUsers}</div>
             </li>
             <li>
               <div class="summary-title color2">
-                <span><i class="fa fa-users"></i> Orders</span>
+                <span><i class="fa fa-shopping-cart"></i> Orders</span>
               </div>
               <div class="summary-body">${summary.orders[0].numOrders}</div>
             </li>
             <li>
               <div class="summary-title color3">
-                <span><i class="fa fa-users"></i> Sales</span>
+                <span><i class="fa fa-money"></i> Sales</span>
               </div>
               <div class="summary-body">$${summary.orders[0].totalSales}</div>
             </li>

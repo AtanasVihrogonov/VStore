@@ -114,7 +114,7 @@ const OrderScreen = {
     // Show to the User
     return `
       <div>
-        <h1>Order ${_id}</h1>
+        <h2>Order ${_id}</h2>
         <div class="order">
           <div class="order-info">
             <div>

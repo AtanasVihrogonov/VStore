@@ -95,7 +95,7 @@ const ProfileScreen = {
                             <td>${order.paidAt || 'No'}</td>
                             <td>${order.deliveryAt || 'No'}</td>
                             <td>
-                              <a href="/#/order/${order._id}">DETIALS</a>
+                              <a id="details-info" href="/#/order/${order._id}">DETIALS</a>
                             </td>
                           </tr>
                         `
