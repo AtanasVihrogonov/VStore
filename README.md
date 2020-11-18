@@ -59,8 +59,6 @@ To serve in the browser  - Runs webpack-dev-server
 $ npm run serve
 ```
 
-### Build
-
 ## Features
 
 - [Webpack](https://webpack.js.org/)
