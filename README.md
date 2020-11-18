@@ -31,7 +31,6 @@ root: $ npm i
 ```
 
 ## Usage
-> To log as an admin visit: https://vstoreapp.herokuapp.com/api/users/createadmin
 
 ### Development server
 
