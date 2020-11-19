@@ -36,8 +36,8 @@ app.get('/api/paypal/clientId', (req, res) => {
   res.send({ clientId: config.PAYPAL_CLIENT_ID });
 });
 
+// Serve uploads folder
 app.use('/uploads', express.static(path.join(__dirname, '/../uploads')));
-
 // Serve all file in frontend folder
 app.use(express.static(path.join(__dirname, '/../frontend')));
 // Serve html file

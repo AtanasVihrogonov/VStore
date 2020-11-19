@@ -1,10 +1,10 @@
-const { getProduct, updateProduct, uploadProductImage } = require('../api');
-const {
+import {
   parseRequestUrl,
   showLoading,
-  hideLoading,
   showMessage,
-} = require('../utils');
+  hideLoading,
+} from '../utils';
+import { getProduct, updateProduct, uploadProductImage } from '../api';
 
 // Create ProductEditScreen Object
 const ProductEditScreen = {
@@ -38,12 +38,10 @@ const ProductEditScreen = {
       .addEventListener('change', async (e) => {
         const file = e.target.files[0];
         const formData = new FormData();
-
         formData.append('image', file);
         showLoading();
         const data = await uploadProductImage(formData);
         hideLoading();
-
         if (data.error) {
           showMessage(data.error);
         } else {

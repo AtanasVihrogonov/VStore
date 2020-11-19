@@ -12,7 +12,7 @@ const storage = multer.diskStorage({
   },
 });
 
-// Define Update Object
+// Define Upload Object
 const upload = multer({ storage });
 const uploadRouter = express.Router();
 
