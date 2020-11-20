@@ -63,7 +63,7 @@ const ProductEditScreen = {
           <form id="edit-product-form">
             <ul class="form-items">
               <li>
-                <h1>Edit Product ${product._id.substring(0, 8)}</h1>
+                <h1>Create Product ${product._id.substring(0, 8)}</h1>
               </li>
               <li>
                 <label for="name">Name</label>

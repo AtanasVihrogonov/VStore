@@ -42,3 +42,4 @@ export const isAdmin = (req, res, next) => {
     res.status(401).send({ message: 'Token is not valid for admin user' });
   }
 };
+
