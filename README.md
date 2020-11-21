@@ -9,8 +9,7 @@ Also deploy on cloud server Heroku and connect it to payment gateways PayPal.
 The website was created by me only a part of my learning process. 
 
 ## Screenshot
-![Screenshot](https://user-images.githubusercontent.com/45083295/99466157-cf203f00-2933-11eb-9723-7eda1b889765.png)
-
+![5fb995e96ce46873717265](https://user-images.githubusercontent.com/45083295/99889059-c38d8a80-2c49-11eb-85b3-8f71dcede6c7.gif)
 ## Tehnologies
 > Project is created with:
 
