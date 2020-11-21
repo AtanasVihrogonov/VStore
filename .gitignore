@@ -3,9 +3,9 @@ dist
 /dist
 node_modules/
 /node_modules
-# frontend/images/*.jpg
-# */images/*
-# images/*
+frontend/images/*.jpg
+*/images/*
+images/*
 uploads/*.jpg
 uploads/*.png
 

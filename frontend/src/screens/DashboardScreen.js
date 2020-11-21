@@ -59,7 +59,7 @@ const DashboardScreen = {
               <div class="summary-title color3">
                 <span><i class="fa fa-money"></i> Sales</span>
               </div>
-              <div class="summary-body">$${summary.orders[0].totalSales}</div>
+              <div class="summary-body">${summary.orders[0].totalSales}</div>
             </li>
           </ul>
           <div class="charts">

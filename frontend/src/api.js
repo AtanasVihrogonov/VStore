@@ -114,8 +114,8 @@ export const uploadProductImage = async (formData) => {
       url: `${apiUrl}/api/uploads`,
       method: 'POST',
       headers: {
-        Authorization: `Bearer ${token}`,
         'Content-Type': 'multipart/form-data',
+        Authorization: `Bearer ${token}`,
       },
       data: formData,
     });
@@ -374,8 +374,8 @@ export const getSummary = async () => {
     const response = await axios({
       url: `${apiUrl}/api/orders/summary`,
       headers: {
+        'Content-Type': 'application/json',
         Authorization: `Bearer ${token}`,
-        'content-type': 'application/json',
       },
     });
     if (response.statusText !== 'OK') {

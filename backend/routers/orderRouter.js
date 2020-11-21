@@ -12,7 +12,6 @@ orderRouter.get(
   isAuth,
   isAdmin,
   expressAsyncHandler(async (req, res) => {
-    // Calculate
     const orders = await Order.aggregate([
       {
         $group: {
@@ -47,7 +46,12 @@ orderRouter.get(
         },
       },
     ]);
-    res.send({ users, orders, dailyOrders, productCategories });
+    res.send({
+      users,
+      orders: orders.length === 0 ? [{ numOrders: 0, totalSales: 0 }] : orders,
+      dailyOrders,
+      productCategories,
+    });
   })
 );
 
