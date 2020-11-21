@@ -23,4 +23,5 @@ const Header = {
   },
   after_render: () => {},
 };
+
 export default Header;

@@ -8,8 +8,7 @@
     "build": "rm -rf dest && babel backend -d dist",
     "serve": "node dist/server.js",
     "heroku-prebuild": "cd frontend && npm install --dev",
-    "heroku-postbuild": "npm run build && cd frontend && npm install && npm run build",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "heroku-postbuild": "npm run build && cd frontend && npm install && npm run build"
   },
   "repository": {
     "type": "git",
