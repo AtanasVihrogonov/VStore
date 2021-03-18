@@ -16,7 +16,7 @@ The website was created by me only a part of my learning process.
 > Project is created with:
 - Web Design using HTML5, CSS3, Sass, Flexbox, Grid System and Response Design.
 - Frontend Development by Pure JavaScript including ES6 Syntax, Rendering System, Libraries for drawing chart and etc.
-- Backend Development using Node and MongoDB consist of ExpressJS, JWT Authentication, Mongoose object data modeling.
+- Backend Development using Node and MongoDB consist of ExpressJS, JWT Authentication, Mongoose object data modelling.
 
 ## Run Locally
 ### 1. Clone repo
